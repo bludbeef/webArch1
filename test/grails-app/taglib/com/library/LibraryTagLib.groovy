@@ -1,6 +1,6 @@
 package com.library
 
-class StudentEnrolTagLib {
+class LibraryTagLib {
 	
 	//static encodeAsForTags = [tagName: 'raw']
 	
@@ -17,7 +17,7 @@ class StudentEnrolTagLib {
 	
 	out << "</span><span style='float:right;margin-right:15px'>"
 	
-	out << "<a href='${createLink(controller:'librarian', action:'logout')}'>"
+	out << "<a href='${createLink(controller:'Librarian', action:'logout')}'>"
 	
 	out << "Logout </a></span>"
 	
@@ -25,7 +25,7 @@ class StudentEnrolTagLib {
 	
 	out << "<span style='float:right;margin-right:10px'>"
 	
-	out << "<a href='${createLink(controller:'librarian', action:'login')}'>"
+	out << "<a href='${createLink(controller:'Librarian', action:'login')}'>"
 	
 	out << "Login </a></span>"
 	
