@@ -1660,3 +1660,334 @@ Caused by: groovy.lang.MissingMethodException: No signature of method: com.libra
 Possible solutions: lock(), lock(java.io.Serializable), load(java.io.Serializable), wait(), count(), last()
 	at com.library.Book$__clinit__closure1.doCall(Book.groovy:33)
 	... 5 more
+2015-04-24 14:48:39,927 [localhost-startStop-1] ERROR StackTrace  - Full Stack Trace:
+org.springframework.beans.factory.BeanCreationException: Error creating bean with name 'grailsApplication' defined in ServletContext resource [/WEB-INF/applicationContext.xml]: Invocation of init method failed; nested exception is org.codehaus.groovy.grails.exceptions.GrailsConfigurationException: Class not found loading Grails application: com.library.LibraryTagLib
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.initializeBean(AbstractAutowireCapableBeanFactory.java:1554)
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.doCreateBean(AbstractAutowireCapableBeanFactory.java:539)
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.createBean(AbstractAutowireCapableBeanFactory.java:475)
+	at org.springframework.beans.factory.support.AbstractBeanFactory$1.getObject(AbstractBeanFactory.java:302)
+	at org.springframework.beans.factory.support.DefaultSingletonBeanRegistry.getSingleton(DefaultSingletonBeanRegistry.java:228)
+	at org.springframework.beans.factory.support.AbstractBeanFactory.doGetBean(AbstractBeanFactory.java:298)
+	at org.springframework.beans.factory.support.AbstractBeanFactory.getBean(AbstractBeanFactory.java:193)
+	at org.springframework.beans.factory.support.DefaultListableBeanFactory.preInstantiateSingletons(DefaultListableBeanFactory.java:687)
+	at org.springframework.context.support.AbstractApplicationContext.finishBeanFactoryInitialization(AbstractApplicationContext.java:762)
+	at org.springframework.context.support.AbstractApplicationContext.refresh(AbstractApplicationContext.java:482)
+	at org.springframework.web.context.ContextLoader.configureAndRefreshWebApplicationContext(ContextLoader.java:403)
+	at org.springframework.web.context.ContextLoader.initWebApplicationContext(ContextLoader.java:306)
+	at org.codehaus.groovy.grails.web.context.GrailsContextLoaderListener.initWebApplicationContext(GrailsContextLoaderListener.java:71)
+	at org.springframework.web.context.ContextLoaderListener.contextInitialized(ContextLoaderListener.java:106)
+	at org.apache.catalina.core.StandardContext.listenerStart(StandardContext.java:4992)
+	at org.apache.catalina.core.StandardContext.startInternal(StandardContext.java:5490)
+	at org.apache.catalina.util.LifecycleBase.start(LifecycleBase.java:150)
+	at org.apache.catalina.core.ContainerBase$StartChild.call(ContainerBase.java:1575)
+	at org.apache.catalina.core.ContainerBase$StartChild.call(ContainerBase.java:1565)
+	at java.util.concurrent.FutureTask$Sync.innerRun(FutureTask.java:334)
+	at java.util.concurrent.FutureTask.run(FutureTask.java:166)
+	at java.util.concurrent.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1146)
+	at java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:615)
+	at java.lang.Thread.run(Thread.java:701)
+Caused by: org.codehaus.groovy.grails.exceptions.GrailsConfigurationException: Class not found loading Grails application: com.library.LibraryTagLib
+	at org.codehaus.groovy.grails.commons.DefaultGrailsApplication.<init>(DefaultGrailsApplication.java:126)
+	at org.codehaus.groovy.grails.commons.GrailsApplicationFactoryBean.afterPropertiesSet(GrailsApplicationFactoryBean.java:99)
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.invokeInitMethods(AbstractAutowireCapableBeanFactory.java:1613)
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.initializeBean(AbstractAutowireCapableBeanFactory.java:1550)
+	... 23 more
+Caused by: java.lang.ClassNotFoundException: com.library.LibraryTagLib
+	at java.net.URLClassLoader$1.run(URLClassLoader.java:217)
+	at java.security.AccessController.doPrivileged(Native Method)
+	at java.net.URLClassLoader.findClass(URLClassLoader.java:205)
+	at java.lang.ClassLoader.loadClass(ClassLoader.java:323)
+	at groovy.lang.GroovyClassLoader.loadClass(GroovyClassLoader.java:655)
+	at groovy.lang.GroovyClassLoader.loadClass(GroovyClassLoader.java:765)
+	at groovy.lang.GroovyClassLoader.loadClass(GroovyClassLoader.java:753)
+	at org.codehaus.groovy.grails.commons.DefaultGrailsApplication.<init>(DefaultGrailsApplication.java:124)
+	... 26 more
+2015-04-24 14:48:39,941 [localhost-startStop-1] ERROR StackTrace  - Full Stack Trace:
+org.codehaus.groovy.grails.exceptions.GrailsConfigurationException: Class not found loading Grails application: com.library.LibraryTagLib
+	at org.codehaus.groovy.grails.commons.DefaultGrailsApplication.<init>(DefaultGrailsApplication.java:126)
+	at org.codehaus.groovy.grails.commons.GrailsApplicationFactoryBean.afterPropertiesSet(GrailsApplicationFactoryBean.java:99)
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.invokeInitMethods(AbstractAutowireCapableBeanFactory.java:1613)
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.initializeBean(AbstractAutowireCapableBeanFactory.java:1550)
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.doCreateBean(AbstractAutowireCapableBeanFactory.java:539)
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.createBean(AbstractAutowireCapableBeanFactory.java:475)
+	at org.springframework.beans.factory.support.AbstractBeanFactory$1.getObject(AbstractBeanFactory.java:302)
+	at org.springframework.beans.factory.support.DefaultSingletonBeanRegistry.getSingleton(DefaultSingletonBeanRegistry.java:228)
+	at org.springframework.beans.factory.support.AbstractBeanFactory.doGetBean(AbstractBeanFactory.java:298)
+	at org.springframework.beans.factory.support.AbstractBeanFactory.getBean(AbstractBeanFactory.java:193)
+	at org.springframework.beans.factory.support.DefaultListableBeanFactory.preInstantiateSingletons(DefaultListableBeanFactory.java:687)
+	at org.springframework.context.support.AbstractApplicationContext.finishBeanFactoryInitialization(AbstractApplicationContext.java:762)
+	at org.springframework.context.support.AbstractApplicationContext.refresh(AbstractApplicationContext.java:482)
+	at org.springframework.web.context.ContextLoader.configureAndRefreshWebApplicationContext(ContextLoader.java:403)
+	at org.springframework.web.context.ContextLoader.initWebApplicationContext(ContextLoader.java:306)
+	at org.codehaus.groovy.grails.web.context.GrailsContextLoaderListener.initWebApplicationContext(GrailsContextLoaderListener.java:71)
+	at org.springframework.web.context.ContextLoaderListener.contextInitialized(ContextLoaderListener.java:106)
+	at org.apache.catalina.core.StandardContext.listenerStart(StandardContext.java:4992)
+	at org.apache.catalina.core.StandardContext.startInternal(StandardContext.java:5490)
+	at org.apache.catalina.util.LifecycleBase.start(LifecycleBase.java:150)
+	at org.apache.catalina.core.ContainerBase$StartChild.call(ContainerBase.java:1575)
+	at org.apache.catalina.core.ContainerBase$StartChild.call(ContainerBase.java:1565)
+	at java.util.concurrent.FutureTask$Sync.innerRun(FutureTask.java:334)
+	at java.util.concurrent.FutureTask.run(FutureTask.java:166)
+	at java.util.concurrent.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1146)
+	at java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:615)
+	at java.lang.Thread.run(Thread.java:701)
+Caused by: java.lang.ClassNotFoundException: com.library.LibraryTagLib
+	at java.net.URLClassLoader$1.run(URLClassLoader.java:217)
+	at java.security.AccessController.doPrivileged(Native Method)
+	at java.net.URLClassLoader.findClass(URLClassLoader.java:205)
+	at java.lang.ClassLoader.loadClass(ClassLoader.java:323)
+	at groovy.lang.GroovyClassLoader.loadClass(GroovyClassLoader.java:655)
+	at groovy.lang.GroovyClassLoader.loadClass(GroovyClassLoader.java:765)
+	at groovy.lang.GroovyClassLoader.loadClass(GroovyClassLoader.java:753)
+	at org.codehaus.groovy.grails.commons.DefaultGrailsApplication.<init>(DefaultGrailsApplication.java:124)
+	... 26 more
+2015-04-24 14:48:39,941 [localhost-startStop-1] ERROR StackTrace  - Full Stack Trace:
+java.lang.ClassNotFoundException: com.library.LibraryTagLib
+	at java.net.URLClassLoader$1.run(URLClassLoader.java:217)
+	at java.security.AccessController.doPrivileged(Native Method)
+	at java.net.URLClassLoader.findClass(URLClassLoader.java:205)
+	at java.lang.ClassLoader.loadClass(ClassLoader.java:323)
+	at groovy.lang.GroovyClassLoader.loadClass(GroovyClassLoader.java:655)
+	at groovy.lang.GroovyClassLoader.loadClass(GroovyClassLoader.java:765)
+	at groovy.lang.GroovyClassLoader.loadClass(GroovyClassLoader.java:753)
+	at org.codehaus.groovy.grails.commons.DefaultGrailsApplication.<init>(DefaultGrailsApplication.java:124)
+	at org.codehaus.groovy.grails.commons.GrailsApplicationFactoryBean.afterPropertiesSet(GrailsApplicationFactoryBean.java:99)
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.invokeInitMethods(AbstractAutowireCapableBeanFactory.java:1613)
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.initializeBean(AbstractAutowireCapableBeanFactory.java:1550)
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.doCreateBean(AbstractAutowireCapableBeanFactory.java:539)
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.createBean(AbstractAutowireCapableBeanFactory.java:475)
+	at org.springframework.beans.factory.support.AbstractBeanFactory$1.getObject(AbstractBeanFactory.java:302)
+	at org.springframework.beans.factory.support.DefaultSingletonBeanRegistry.getSingleton(DefaultSingletonBeanRegistry.java:228)
+	at org.springframework.beans.factory.support.AbstractBeanFactory.doGetBean(AbstractBeanFactory.java:298)
+	at org.springframework.beans.factory.support.AbstractBeanFactory.getBean(AbstractBeanFactory.java:193)
+	at org.springframework.beans.factory.support.DefaultListableBeanFactory.preInstantiateSingletons(DefaultListableBeanFactory.java:687)
+	at org.springframework.context.support.AbstractApplicationContext.finishBeanFactoryInitialization(AbstractApplicationContext.java:762)
+	at org.springframework.context.support.AbstractApplicationContext.refresh(AbstractApplicationContext.java:482)
+	at org.springframework.web.context.ContextLoader.configureAndRefreshWebApplicationContext(ContextLoader.java:403)
+	at org.springframework.web.context.ContextLoader.initWebApplicationContext(ContextLoader.java:306)
+	at org.codehaus.groovy.grails.web.context.GrailsContextLoaderListener.initWebApplicationContext(GrailsContextLoaderListener.java:71)
+	at org.springframework.web.context.ContextLoaderListener.contextInitialized(ContextLoaderListener.java:106)
+	at org.apache.catalina.core.StandardContext.listenerStart(StandardContext.java:4992)
+	at org.apache.catalina.core.StandardContext.startInternal(StandardContext.java:5490)
+	at org.apache.catalina.util.LifecycleBase.start(LifecycleBase.java:150)
+	at org.apache.catalina.core.ContainerBase$StartChild.call(ContainerBase.java:1575)
+	at org.apache.catalina.core.ContainerBase$StartChild.call(ContainerBase.java:1565)
+	at java.util.concurrent.FutureTask$Sync.innerRun(FutureTask.java:334)
+	at java.util.concurrent.FutureTask.run(FutureTask.java:166)
+	at java.util.concurrent.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1146)
+	at java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:615)
+	at java.lang.Thread.run(Thread.java:701)
+2015-04-24 14:48:39,941 [localhost-startStop-1] ERROR StackTrace  - Full Stack Trace:
+org.springframework.beans.factory.BeanCreationException: Error creating bean with name 'grailsApplication' defined in ServletContext resource [/WEB-INF/applicationContext.xml]: Invocation of init method failed; nested exception is org.codehaus.groovy.grails.exceptions.GrailsConfigurationException: Class not found loading Grails application: com.library.LibraryTagLib
+	at java.util.concurrent.FutureTask$Sync.innerRun(FutureTask.java:334)
+	at java.util.concurrent.FutureTask.run(FutureTask.java:166)
+	at java.util.concurrent.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1146)
+	at java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:615)
+	at java.lang.Thread.run(Thread.java:701)
+Caused by: org.codehaus.groovy.grails.exceptions.GrailsConfigurationException: Class not found loading Grails application: com.library.LibraryTagLib
+	... 5 more
+Caused by: java.lang.ClassNotFoundException: com.library.LibraryTagLib
+	at java.net.URLClassLoader$1.run(URLClassLoader.java:217)
+	at java.net.URLClassLoader.findClass(URLClassLoader.java:205)
+	at java.lang.ClassLoader.loadClass(ClassLoader.java:323)
+	... 5 more
+2015-04-24 14:48:39,942 [localhost-startStop-1] ERROR StackTrace  - Full Stack Trace:
+org.springframework.beans.factory.BeanCreationException: Error creating bean with name 'grailsApplication' defined in ServletContext resource [/WEB-INF/applicationContext.xml]: Invocation of init method failed; nested exception is org.codehaus.groovy.grails.exceptions.GrailsConfigurationException: Class not found loading Grails application: com.library.LibraryTagLib
+	at java.util.concurrent.FutureTask$Sync.innerRun(FutureTask.java:334)
+	at java.util.concurrent.FutureTask.run(FutureTask.java:166)
+	at java.util.concurrent.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1146)
+	at java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:615)
+	at java.lang.Thread.run(Thread.java:701)
+Caused by: org.codehaus.groovy.grails.exceptions.GrailsConfigurationException: Class not found loading Grails application: com.library.LibraryTagLib
+	... 5 more
+Caused by: java.lang.ClassNotFoundException: com.library.LibraryTagLib
+	at java.net.URLClassLoader$1.run(URLClassLoader.java:217)
+	at java.net.URLClassLoader.findClass(URLClassLoader.java:205)
+	at java.lang.ClassLoader.loadClass(ClassLoader.java:323)
+	... 5 more
+2015-04-24 14:48:39,942 [localhost-startStop-1] ERROR StackTrace  - Full Stack Trace:
+org.codehaus.groovy.grails.exceptions.GrailsConfigurationException: Class not found loading Grails application: com.library.LibraryTagLib
+	at java.util.concurrent.FutureTask$Sync.innerRun(FutureTask.java:334)
+	at java.util.concurrent.FutureTask.run(FutureTask.java:166)
+	at java.util.concurrent.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1146)
+	at java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:615)
+	at java.lang.Thread.run(Thread.java:701)
+Caused by: java.lang.ClassNotFoundException: com.library.LibraryTagLib
+	at java.net.URLClassLoader$1.run(URLClassLoader.java:217)
+	at java.net.URLClassLoader.findClass(URLClassLoader.java:205)
+	at java.lang.ClassLoader.loadClass(ClassLoader.java:323)
+	... 5 more
+2015-04-24 14:48:39,942 [localhost-startStop-1] ERROR StackTrace  - Full Stack Trace:
+java.lang.ClassNotFoundException: com.library.LibraryTagLib
+	at java.net.URLClassLoader$1.run(URLClassLoader.java:217)
+	at java.net.URLClassLoader.findClass(URLClassLoader.java:205)
+	at java.lang.ClassLoader.loadClass(ClassLoader.java:323)
+	at java.util.concurrent.FutureTask$Sync.innerRun(FutureTask.java:334)
+	at java.util.concurrent.FutureTask.run(FutureTask.java:166)
+	at java.util.concurrent.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1146)
+	at java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:615)
+	at java.lang.Thread.run(Thread.java:701)
+2015-04-24 14:48:39,942 [localhost-startStop-1] ERROR StackTrace  - Full Stack Trace:
+org.springframework.beans.factory.BeanCreationException: Error creating bean with name 'grailsApplication' defined in ServletContext resource [/WEB-INF/applicationContext.xml]: Invocation of init method failed; nested exception is org.codehaus.groovy.grails.exceptions.GrailsConfigurationException: Class not found loading Grails application: com.library.LibraryTagLib
+	at java.util.concurrent.FutureTask$Sync.innerRun(FutureTask.java:334)
+	at java.util.concurrent.FutureTask.run(FutureTask.java:166)
+	at java.util.concurrent.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1146)
+	at java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:615)
+	at java.lang.Thread.run(Thread.java:701)
+Caused by: org.codehaus.groovy.grails.exceptions.GrailsConfigurationException: Class not found loading Grails application: com.library.LibraryTagLib
+	... 5 more
+Caused by: java.lang.ClassNotFoundException: com.library.LibraryTagLib
+	at java.net.URLClassLoader$1.run(URLClassLoader.java:217)
+	at java.net.URLClassLoader.findClass(URLClassLoader.java:205)
+	at java.lang.ClassLoader.loadClass(ClassLoader.java:323)
+	... 5 more
+2015-04-24 14:48:40,006 [localhost-startStop-1] ERROR StackTrace  - Full Stack Trace:
+org.springframework.beans.factory.BeanCreationException: Error creating bean with name 'grailsApplication' defined in ServletContext resource [/WEB-INF/applicationContext.xml]: Invocation of init method failed; nested exception is org.codehaus.groovy.grails.exceptions.GrailsConfigurationException: Class not found loading Grails application: com.library.LibraryTagLib
+	at java.util.concurrent.FutureTask$Sync.innerRun(FutureTask.java:334)
+	at java.util.concurrent.FutureTask.run(FutureTask.java:166)
+	at java.util.concurrent.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1146)
+	at java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:615)
+	at java.lang.Thread.run(Thread.java:701)
+Caused by: org.codehaus.groovy.grails.exceptions.GrailsConfigurationException: Class not found loading Grails application: com.library.LibraryTagLib
+	... 5 more
+Caused by: java.lang.ClassNotFoundException: com.library.LibraryTagLib
+	at java.net.URLClassLoader$1.run(URLClassLoader.java:217)
+	at java.net.URLClassLoader.findClass(URLClassLoader.java:205)
+	at java.lang.ClassLoader.loadClass(ClassLoader.java:323)
+	... 5 more
+2015-04-24 14:48:40,007 [localhost-startStop-1] ERROR StackTrace  - Full Stack Trace:
+org.codehaus.groovy.grails.exceptions.GrailsConfigurationException: Class not found loading Grails application: com.library.LibraryTagLib
+	at java.util.concurrent.FutureTask$Sync.innerRun(FutureTask.java:334)
+	at java.util.concurrent.FutureTask.run(FutureTask.java:166)
+	at java.util.concurrent.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1146)
+	at java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:615)
+	at java.lang.Thread.run(Thread.java:701)
+Caused by: java.lang.ClassNotFoundException: com.library.LibraryTagLib
+	at java.net.URLClassLoader$1.run(URLClassLoader.java:217)
+	at java.net.URLClassLoader.findClass(URLClassLoader.java:205)
+	at java.lang.ClassLoader.loadClass(ClassLoader.java:323)
+	... 5 more
+2015-04-24 14:48:40,007 [localhost-startStop-1] ERROR StackTrace  - Full Stack Trace:
+java.lang.ClassNotFoundException: com.library.LibraryTagLib
+	at java.net.URLClassLoader$1.run(URLClassLoader.java:217)
+	at java.net.URLClassLoader.findClass(URLClassLoader.java:205)
+	at java.lang.ClassLoader.loadClass(ClassLoader.java:323)
+	at java.util.concurrent.FutureTask$Sync.innerRun(FutureTask.java:334)
+	at java.util.concurrent.FutureTask.run(FutureTask.java:166)
+	at java.util.concurrent.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1146)
+	at java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:615)
+	at java.lang.Thread.run(Thread.java:701)
+2015-04-24 14:48:40,007 [localhost-startStop-1] ERROR StackTrace  - Full Stack Trace:
+org.springframework.beans.factory.BeanCreationException: Error creating bean with name 'grailsApplication' defined in ServletContext resource [/WEB-INF/applicationContext.xml]: Invocation of init method failed; nested exception is org.codehaus.groovy.grails.exceptions.GrailsConfigurationException: Class not found loading Grails application: com.library.LibraryTagLib
+	at java.util.concurrent.FutureTask$Sync.innerRun(FutureTask.java:334)
+	at java.util.concurrent.FutureTask.run(FutureTask.java:166)
+	at java.util.concurrent.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1146)
+	at java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:615)
+	at java.lang.Thread.run(Thread.java:701)
+Caused by: org.codehaus.groovy.grails.exceptions.GrailsConfigurationException: Class not found loading Grails application: com.library.LibraryTagLib
+	... 5 more
+Caused by: java.lang.ClassNotFoundException: com.library.LibraryTagLib
+	at java.net.URLClassLoader$1.run(URLClassLoader.java:217)
+	at java.net.URLClassLoader.findClass(URLClassLoader.java:205)
+	at java.lang.ClassLoader.loadClass(ClassLoader.java:323)
+	... 5 more
+2015-04-24 14:48:40,007 [localhost-startStop-1] ERROR StackTrace  - Full Stack Trace:
+org.springframework.beans.factory.BeanCreationException: Error creating bean with name 'grailsApplication' defined in ServletContext resource [/WEB-INF/applicationContext.xml]: Invocation of init method failed; nested exception is org.codehaus.groovy.grails.exceptions.GrailsConfigurationException: Class not found loading Grails application: com.library.LibraryTagLib
+	at java.util.concurrent.FutureTask$Sync.innerRun(FutureTask.java:334)
+	at java.util.concurrent.FutureTask.run(FutureTask.java:166)
+	at java.util.concurrent.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1146)
+	at java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:615)
+	at java.lang.Thread.run(Thread.java:701)
+Caused by: org.codehaus.groovy.grails.exceptions.GrailsConfigurationException: Class not found loading Grails application: com.library.LibraryTagLib
+	... 5 more
+Caused by: java.lang.ClassNotFoundException: com.library.LibraryTagLib
+	at java.net.URLClassLoader$1.run(URLClassLoader.java:217)
+	at java.net.URLClassLoader.findClass(URLClassLoader.java:205)
+	at java.lang.ClassLoader.loadClass(ClassLoader.java:323)
+	... 5 more
+2015-04-24 14:48:40,007 [localhost-startStop-1] ERROR StackTrace  - Full Stack Trace:
+org.codehaus.groovy.grails.exceptions.GrailsConfigurationException: Class not found loading Grails application: com.library.LibraryTagLib
+	at java.util.concurrent.FutureTask$Sync.innerRun(FutureTask.java:334)
+	at java.util.concurrent.FutureTask.run(FutureTask.java:166)
+	at java.util.concurrent.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1146)
+	at java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:615)
+	at java.lang.Thread.run(Thread.java:701)
+Caused by: java.lang.ClassNotFoundException: com.library.LibraryTagLib
+	at java.net.URLClassLoader$1.run(URLClassLoader.java:217)
+	at java.net.URLClassLoader.findClass(URLClassLoader.java:205)
+	at java.lang.ClassLoader.loadClass(ClassLoader.java:323)
+	... 5 more
+2015-04-24 14:48:40,007 [localhost-startStop-1] ERROR StackTrace  - Full Stack Trace:
+java.lang.ClassNotFoundException: com.library.LibraryTagLib
+	at java.net.URLClassLoader$1.run(URLClassLoader.java:217)
+	at java.net.URLClassLoader.findClass(URLClassLoader.java:205)
+	at java.lang.ClassLoader.loadClass(ClassLoader.java:323)
+	at java.util.concurrent.FutureTask$Sync.innerRun(FutureTask.java:334)
+	at java.util.concurrent.FutureTask.run(FutureTask.java:166)
+	at java.util.concurrent.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1146)
+	at java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:615)
+	at java.lang.Thread.run(Thread.java:701)
+2015-04-24 14:48:40,007 [localhost-startStop-1] ERROR StackTrace  - Full Stack Trace:
+org.springframework.beans.factory.BeanCreationException: Error creating bean with name 'grailsApplication' defined in ServletContext resource [/WEB-INF/applicationContext.xml]: Invocation of init method failed; nested exception is org.codehaus.groovy.grails.exceptions.GrailsConfigurationException: Class not found loading Grails application: com.library.LibraryTagLib
+	at java.util.concurrent.FutureTask$Sync.innerRun(FutureTask.java:334)
+	at java.util.concurrent.FutureTask.run(FutureTask.java:166)
+	at java.util.concurrent.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1146)
+	at java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:615)
+	at java.lang.Thread.run(Thread.java:701)
+Caused by: org.codehaus.groovy.grails.exceptions.GrailsConfigurationException: Class not found loading Grails application: com.library.LibraryTagLib
+	... 5 more
+Caused by: java.lang.ClassNotFoundException: com.library.LibraryTagLib
+	at java.net.URLClassLoader$1.run(URLClassLoader.java:217)
+	at java.net.URLClassLoader.findClass(URLClassLoader.java:205)
+	at java.lang.ClassLoader.loadClass(ClassLoader.java:323)
+	... 5 more
+2015-04-24 14:48:40,008 [localhost-startStop-1] ERROR StackTrace  - Full Stack Trace:
+org.springframework.beans.factory.BeanCreationException: Error creating bean with name 'grailsApplication' defined in ServletContext resource [/WEB-INF/applicationContext.xml]: Invocation of init method failed; nested exception is org.codehaus.groovy.grails.exceptions.GrailsConfigurationException: Class not found loading Grails application: com.library.LibraryTagLib
+	at java.util.concurrent.FutureTask$Sync.innerRun(FutureTask.java:334)
+	at java.util.concurrent.FutureTask.run(FutureTask.java:166)
+	at java.util.concurrent.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1146)
+	at java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:615)
+	at java.lang.Thread.run(Thread.java:701)
+Caused by: org.codehaus.groovy.grails.exceptions.GrailsConfigurationException: Class not found loading Grails application: com.library.LibraryTagLib
+	... 5 more
+Caused by: java.lang.ClassNotFoundException: com.library.LibraryTagLib
+	at java.net.URLClassLoader$1.run(URLClassLoader.java:217)
+	at java.net.URLClassLoader.findClass(URLClassLoader.java:205)
+	at java.lang.ClassLoader.loadClass(ClassLoader.java:323)
+	... 5 more
+2015-04-24 14:48:40,008 [localhost-startStop-1] ERROR StackTrace  - Full Stack Trace:
+org.codehaus.groovy.grails.exceptions.GrailsConfigurationException: Class not found loading Grails application: com.library.LibraryTagLib
+	at java.util.concurrent.FutureTask$Sync.innerRun(FutureTask.java:334)
+	at java.util.concurrent.FutureTask.run(FutureTask.java:166)
+	at java.util.concurrent.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1146)
+	at java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:615)
+	at java.lang.Thread.run(Thread.java:701)
+Caused by: java.lang.ClassNotFoundException: com.library.LibraryTagLib
+	at java.net.URLClassLoader$1.run(URLClassLoader.java:217)
+	at java.net.URLClassLoader.findClass(URLClassLoader.java:205)
+	at java.lang.ClassLoader.loadClass(ClassLoader.java:323)
+	... 5 more
+2015-04-24 14:48:40,008 [localhost-startStop-1] ERROR StackTrace  - Full Stack Trace:
+java.lang.ClassNotFoundException: com.library.LibraryTagLib
+	at java.net.URLClassLoader$1.run(URLClassLoader.java:217)
+	at java.net.URLClassLoader.findClass(URLClassLoader.java:205)
+	at java.lang.ClassLoader.loadClass(ClassLoader.java:323)
+	at java.util.concurrent.FutureTask$Sync.innerRun(FutureTask.java:334)
+	at java.util.concurrent.FutureTask.run(FutureTask.java:166)
+	at java.util.concurrent.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1146)
+	at java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:615)
+	at java.lang.Thread.run(Thread.java:701)
+2015-04-24 14:48:40,008 [localhost-startStop-1] ERROR StackTrace  - Full Stack Trace:
+org.springframework.beans.factory.BeanCreationException: Error creating bean with name 'grailsApplication' defined in ServletContext resource [/WEB-INF/applicationContext.xml]: Invocation of init method failed; nested exception is org.codehaus.groovy.grails.exceptions.GrailsConfigurationException: Class not found loading Grails application: com.library.LibraryTagLib
+	at java.util.concurrent.FutureTask$Sync.innerRun(FutureTask.java:334)
+	at java.util.concurrent.FutureTask.run(FutureTask.java:166)
+	at java.util.concurrent.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1146)
+	at java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:615)
+	at java.lang.Thread.run(Thread.java:701)
+Caused by: org.codehaus.groovy.grails.exceptions.GrailsConfigurationException: Class not found loading Grails application: com.library.LibraryTagLib
+	... 5 more
+Caused by: java.lang.ClassNotFoundException: com.library.LibraryTagLib
+	at java.net.URLClassLoader$1.run(URLClassLoader.java:217)
+	at java.net.URLClassLoader.findClass(URLClassLoader.java:205)
+	at java.lang.ClassLoader.loadClass(ClassLoader.java:323)
+	... 5 more
